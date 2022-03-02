@@ -1,0 +1,26 @@
+[
+    {
+        "pk":1,
+        "model":"products.category",
+        "fields":{
+            "name":"psychedelic",
+            "friendly_name":"Psychedelic"
+        }
+    },
+    {
+        "pk":2,
+        "model":"products.category",
+        "fields":{
+            "name":"dark_fantasy",
+            "friendly_name":"Dark Fantasy"
+        }
+    },
+    {
+        "pk":3,
+        "model":"products.category",
+        "fields":{
+            "name":"mystical",
+            "friendly_name":"Mystical"
+        }
+    }
+]

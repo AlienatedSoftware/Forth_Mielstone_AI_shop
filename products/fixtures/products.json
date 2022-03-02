@@ -1,0 +1,80 @@
+[
+	{
+		"pk":1,
+		"model":"products.product",
+		"fields":{
+			"sku":"pp5001340155",
+			"name":"Woman",
+			"description":"Woman bathed in beauty",
+			"price":19.99,
+			"category":1,
+			"rating":4.6,
+			"image":"media/woman_ai.jpg"
+		}
+	},
+	{
+		"pk":2,
+		"model":"products.product",
+		"fields":{
+			"sku":"pp5001600425",
+			"name":"Man",
+			"description":"Man of war",
+			"price":23.99,
+			"category":1,
+			"rating":4.6,
+			"image":"media/man_ai.jpg"
+		}
+	},
+	{
+		"pk":3,
+		"model":"products.product",
+		"fields":{
+			"sku":"pp5001730010",
+			"name":"Creature",
+			"description":"Creature of the night",
+			"price":29.99,
+			"category":2,
+			"rating":4.7,
+			"image":"media/creature_ai.jpg"
+		}
+	},
+	{
+		"pk":4,
+		"model":"products.product",
+		"fields":{
+			"sku":"pp5001890157",
+			"name":"Dragon",
+			"description":"Beast of fire",
+			"price":69.99,
+			"category":2,
+			"rating":5.0,
+			"image":"media/dragon_ai.jpg"
+		}
+	},
+	{
+		"pk":5,
+		"model":"products.product",
+		"fields":{
+			"sku":"pp5002111605",
+			"name":"Fox",
+			"description":"Red fox",
+			"price":32.99,
+			"category":3,
+			"rating":4.7,
+			"image":"media/fox_ai.jpg"
+		}
+	},
+	{
+		"pk":6,
+		"model":"products.product",
+		"fields":{
+			"sku":"pp5002260206",
+			"name":"Flower",
+			"description":"Flower of the Earth",
+			"price":30.99,
+			"category":3,
+			"rating":4.7,
+			"image":"media/flower_ai.jpg"
+		}
+	}
+]
