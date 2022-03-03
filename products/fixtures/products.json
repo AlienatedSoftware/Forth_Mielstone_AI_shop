@@ -9,6 +9,7 @@
 			"price":19.99,
 			"category":1,
 			"rating":4.6,
+			"image_url": "https://i.imgur.com/7Bxxb3c.jpeg",
 			"image":"media/woman_ai.jpg"
 		}
 	},
@@ -22,6 +23,7 @@
 			"price":23.99,
 			"category":1,
 			"rating":4.6,
+			"image_url": "https://i.imgur.com/zydn3bF.jpeg",
 			"image":"media/man_ai.jpg"
 		}
 	},
@@ -35,6 +37,7 @@
 			"price":29.99,
 			"category":2,
 			"rating":4.7,
+			"image_url": "https://i.imgur.com/5Pz7USs.jpg",
 			"image":"media/creature_ai.jpg"
 		}
 	},
@@ -48,6 +51,7 @@
 			"price":69.99,
 			"category":2,
 			"rating":5.0,
+			"image_url": "https://i.imgur.com/26ZRasd.jpg",
 			"image":"media/dragon_ai.jpg"
 		}
 	},
@@ -61,6 +65,7 @@
 			"price":32.99,
 			"category":3,
 			"rating":4.7,
+			"image_url": "https://i.imgur.com/x3Ca9jR.jpg",
 			"image":"media/fox_ai.jpg"
 		}
 	},
@@ -74,6 +79,7 @@
 			"price":30.99,
 			"category":3,
 			"rating":4.7,
+			"image_url": "https://i.imgur.com/qo119WU.jpg",
 			"image":"media/flower_ai.jpg"
 		}
 	}
