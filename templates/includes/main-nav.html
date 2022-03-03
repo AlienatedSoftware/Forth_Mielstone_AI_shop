@@ -17,10 +17,10 @@
                 Mintable NFTs
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="nft-link">
-                <a href="" class="dropdown-item">Dark Fantasy</a>
-                <a href="" class="dropdown-item">Mystical</a>
-                <a href="" class="dropdown-item">Psychedelic</a>
-                <a href="" class="dropdown-item">All NFTs</a>
+                <a href="{% url 'products' %}?category=dark_fantasy" class="dropdown-item">Dark Fantasy</a>
+                <a href="{% url 'products' %}?category=mystical" class="dropdown-item">Mystical</a>
+                <a href="{% url 'products' %}?category=psychedelic" class="dropdown-item">Psychedelic</a>
+                <a href="{% url 'products' %}?category=dark_fantasy,mystical,psychedelic" class="dropdown-item">All NFTs</a>
             </div>
         </li>
 
@@ -29,9 +29,9 @@
                 Prints
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="prints-link">
-                <a href="" class="dropdown-item">Framed</a>
-                <a href="" class="dropdown-item">Posters</a>
-                <a href="" class="dropdown-item">All Prints</a>
+                <a href="{% url 'products' %}?category=mystical,psychedelic" class="dropdown-item">Framed</a>
+                <a href="{% url 'products' %}?category=mystical" class="dropdown-item">Posters</a>
+                <a href="{% url 'products' %}?category=mystical,psychedelic" class="dropdown-item">All Prints</a>
             </div>
         </li>
 
@@ -40,9 +40,8 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
+                <a href="{% url 'products' %}?category=psychedelic" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'products' %}?category=dark_fantasy,mystical,psychedelic" class="dropdown-item">Deals</a>
                 <a href="" class="dropdown-item">All Specials</a>
             </div>
         </li>
