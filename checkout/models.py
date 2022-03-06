@@ -6,14 +6,13 @@ from django.conf import settings
 
 from products.models import Product
 
-# Create your models here.
 
 class Order(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
-    country = models.CharField(max_length=20, null=False, blank=False)
+    country = models.CharField(max_length=40, null=False, blank=False)
     postcode = models.CharField(max_length=20, null=True, blank=True)
     town_or_city = models.CharField(max_length=40, null=False, blank=False)
     street_address1 = models.CharField(max_length=80, null=False, blank=False)
@@ -24,27 +23,21 @@ class Order(models.Model):
     order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
 
-class OrderLineItem(models.Model):
-    order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
-    product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
-    quantity = models.IntegerField(null=False, blank=False, default=0)
-    lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
-
-    # Generates random number using UUID
+    # Generates a random number using UUID
     def _generate_order_number(self):
         return uuid.uuid4().hex.upper()
 
-    # Updates grand total each time an item is added, counts towards delivery too
+    # Updates grand total each time an item is added. Also adds to delivery
     def update_total(self):
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
-            self.delivery_cost = self.order_total * sdp / 100
+            self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
         else:
             self.delivery_cost = 0
         self.grand_total = self.order_total + self.delivery_cost
         self.save()
 
-    # Overrides the original saved order, to set a new order number if one isn't set already
+    # Overwrites the original saved order to set the order number if one is not set already.
     def save(self, *args, **kwargs):
         if not self.order_number:
             self.order_number = self._generate_order_number()
@@ -53,13 +46,14 @@ class OrderLineItem(models.Model):
     def __str__(self):
         return self.order_number
 
+
 class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
     product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
     quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
 
-    # Overrides the original saved order, to set the lineitem total and updates the order total
+    # Overrides the original save method to update order total
     def save(self, *args, **kwargs):
         self.lineitem_total = self.product.price * self.quantity
         super().save(*args, **kwargs)
