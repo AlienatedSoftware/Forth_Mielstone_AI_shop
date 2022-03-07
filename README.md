@@ -1,8 +1,9 @@
 # A.I. Shop
 
-Hello there!
+Hello there! Welcome to the wonderful world of A.I. art.
+There is no better place then to buy completely unique computer generated art works to have as mintable NFTs!
 
-A live version can be found [here](link).
+A live version can be found [here](https://artificial-intelligence-shop.herokuapp.com/).
 
 # UX
 
@@ -40,7 +41,7 @@ The website is clean and intuitive, making navigation easy.
 ### Existing Features
 
 - **New Account** <br>
-To access the page the user must first create a new account by clicking on the "Signup" link on the navbar or button on landing page form.
+To access the page the user must first create a new account by clicking on the "Signup" link on the navbar or button on landing page form. Will receive an e-mail verification on creation.
 
 - **Login** <br>
 To access the page the user must use their credentials to login. In the case of this build there is also an option to login as a "Demo User" or "Demo Staff" which allows the user experience the application utilizing a premade account. (refer to testing section) 
@@ -58,7 +59,7 @@ NFTs are divided into different categories.
 NFTs that are avalibile for users to purchase and sell else where. Known as 'mintable', which is referred to as avalibile to flip for profits. 
 
 - **Prints** <br>
-Prints of such NFTs, not as exclusive as it is made from paper. For site purposes and lack of products, the developer re-used some of the NFT data to act as prints also, so not as well presented. 
+Prints of such NFTs, not as exclusive as it is made from paper. For site purposes and lack of product fixtures, the developer re-used some of the NFT data to act as prints also, so not as well presented.
 
 
 ## Design
