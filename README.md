@@ -5,6 +5,8 @@ There is no better place then to buy completely unique computer generated art wo
 
 A live version can be found [here](https://artificial-intelligence-shop.herokuapp.com/).
 
+See bottom for resubmission info.
+
 # UX
 
 This project tries to create a Django application for a NFT store service.
@@ -151,3 +153,13 @@ So credits go to https://github.com/ckz8780
 ### Acknowledgements
 
 -   The wonderful tutors at C.I. but most importantly Chris Z for the mini project walkthrough.
+
+### Resubmission Details
+
+Since it has been a while since I have touched this code, I have approached my custom model task in a slightly different way. <br>
+For this, I have created a new folder within the repo, and a completely new page just to prove that I can creat a custom model <br>
+to access these, you must have to manually enter in '/custom_model' for the pages to render. After the custom_model is defined, to <br>
+access each data it should follow by 'nft' and a number. Right now there's only 2 since resubmission. However you can add your own <br>
+through the admin panel.<br>
+
+Go to /custom_model/nft/1 to see the first ever data added to my custom model.
