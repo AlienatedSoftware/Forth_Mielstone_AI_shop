@@ -162,4 +162,12 @@ to access these, you must have to manually enter in '/custom_model' for the page
 access each data it should follow by 'nft' and a number. Right now there's only 2 since resubmission. However you can add your own <br>
 through the admin panel.<br>
 
-Go to /custom_model/nft/1 to see the first ever data added to my custom model.
+Go to /custom_model/nft/1 to see the first ever data added to my custom model. <br>
+[Example](https://artificial-intelligence-shop.herokuapp.com/custom_model/nft/1)
+
+Due to secerity Breach of Heroku recently, I had to make a new exclusive super user for the heroku deployed site.
+
+Login details:
+
+User : superadmin <br>
+Password : superuserpass
